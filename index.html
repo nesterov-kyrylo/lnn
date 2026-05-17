@@ -1,327 +1,390 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" data-theme="light">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Елена Воронцова — Психолог</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Елена Воронцова — профессиональный психолог. Индивидуальные и семейные консультации онлайн и офлайн. Помогаю справиться с тревогой, выгоранием и найти внутреннюю гармонию.">
+  <meta property="og:title" content="Елена Воронцова — Психолог | Консультации">
+  <meta property="og:description" content="Бережная психологическая помощь. Запишитесь на индивидуальную или семейную сессию.">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=1200&h=630&fit=crop">
+  <title>Елена Воронцова — Психолог | Консультации онлайн и офлайн</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="grain" id="grain"></div>
-    <header class="header" id="header">
-        <div class="container header__container">
-            <a href="#" class="logo">Елена Воронцова</a>
-            <nav class="nav" id="nav">
-                <a href="#about" class="nav__link">Обо мне</a>
-                <a href="#services" class="nav__link">Услуги</a>
-                <a href="#process" class="nav__link">Как проходит</a>
-                <a href="#reviews" class="nav__link">Отзывы</a>
-                <a href="#pricing" class="nav__link">Стоимость</a>
-                <a href="#faq" class="nav__link">FAQ</a>
-            </nav>
-            <div class="theme-toggle" id="themeToggle">☀</div>
-            <button class="burger" id="burger"><span></span><span></span><span></span></button>
-        </div>
-    </header>
-    <section class="hero" id="hero">
-        <div class="hero__bg"></div>
-        <div class="container hero__container">
-            <div class="hero__content">
-                <h1 class="hero__title"><span class="typewriter" id="typewriter"></span><span class="typewriter__cursor">|</span></h1>
-                <p class="hero__subtitle">Индивидуальные консультации психолога в онлайн и офлайн формате</p>
-                <div class="hero__buttons">
-                    <a href="#contact" class="btn btn--primary">Записаться</a>
-                    <a href="#about" class="btn btn--outline">Подробнее</a>
-                </div>
-                <div class="hero__stats">
-                    <div class="hero__stat"><span class="hero__stat-number">5+</span><span class="hero__stat-label">лет практики</span></div>
-                    <div class="hero__stat"><span class="hero__stat-number">300+</span><span class="hero__stat-label">консультаций</span></div>
-                </div>
-                <div class="hero__mood" id="heroMood">
-                    <p class="hero__mood-label">Как вы себя чувствуете?</p>
-                    <div class="hero__mood-buttons">
-                        <button class="hero__mood-btn" data-target="services" data-scroll="anxiety">😰</button>
-                        <button class="hero__mood-btn" data-target="services" data-scroll="stress">😔</button>
-                        <button class="hero__mood-btn" data-target="services" data-scroll="burnout">😵</button>
-                        <button class="hero__mood-btn" data-target="services" data-scroll="self">🤔</button>
-                        <button class="hero__mood-btn" data-target="services" data-scroll="relations">💔</button>
-                    </div>
-                </div>
+  <div class="grain" aria-hidden="true"></div>
+
+  <header id="header" class="header" role="banner">
+    <div class="container header__container">
+      <a href="#" class="logo" aria-label="На главную">Елена Воронцова</a>
+      <nav id="nav" class="nav" aria-label="Основная навигация">
+        <a href="#about" class="nav__link">Обо мне</a>
+        <a href="#services" class="nav__link">Услуги</a>
+        <a href="#process" class="nav__link">Как проходит</a>
+        <a href="#reviews" class="nav__link">Отзывы</a>
+        <a href="#pricing" class="nav__link">Стоимость</a>
+        <a href="#faq" class="nav__link">FAQ</a>
+        <a href="#contact" class="btn btn--primary btn--small">Записаться</a>
+      </nav>
+      <button id="themeToggle" class="theme-toggle" aria-label="Переключить тему">☀</button>
+      <button id="burger" class="burger" aria-label="Открыть меню" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+    <section id="hero" class="hero">
+      <div class="hero__bg" aria-hidden="true"></div>
+      <div class="container hero__container">
+        <div class="hero__content">
+          <h1 class="hero__title">Помогаю обрести<br>внутреннюю опору<br>и спокойствие</h1>
+          <p class="hero__subtitle">Индивидуальные консультации психолога в онлайн и офлайн формате</p>
+          <div class="hero__buttons">
+            <a href="#contact" class="btn btn--primary">Записаться</a>
+            <a href="#about" class="btn btn--outline">Подробнее</a>
+          </div>
+          <div class="hero__stats">
+            <div class="hero__stat"><span class="hero__stat-number">5+</span><span class="hero__stat-label">лет практики</span></div>
+            <div class="hero__stat"><span class="hero__stat-number">300+</span><span class="hero__stat-label">консультаций</span></div>
+          </div>
+          <div class="hero__mood">
+            <p class="hero__mood-label">Как вы себя чувствуете?</p>
+            <div class="hero__mood-buttons">
+              <button class="hero__mood-btn" data-target="services" data-scroll="anxiety" aria-label="Тревога">😰</button>
+              <button class="hero__mood-btn" data-target="services" data-scroll="stress" aria-label="Стресс">😔</button>
+              <button class="hero__mood-btn" data-target="services" data-scroll="burnout" aria-label="Выгорание">😵</button>
+              <button class="hero__mood-btn" data-target="services" data-scroll="self" aria-label="Поиск себя">🤔</button>
+              <button class="hero__mood-btn" data-target="services" data-scroll="relations" aria-label="Отношения">💔</button>
             </div>
-            <div class="hero__image-wrapper">
-                <div class="hero__image-glass"></div>
-                <div class="hero__image"><img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&h=800&fit=crop&crop=face" alt="Психолог"></div>
-            </div>
+          </div>
         </div>
-        <a href="#about" class="scroll-down"><span class="scroll-down__line"></span></a>
+        <div class="hero__image-wrapper">
+          <div class="hero__image-glass" aria-hidden="true"></div>
+          <figure class="hero__image">
+            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&h=800&fit=crop&crop=face" alt="Елена Воронцова, психолог" loading="eager" width="420" height="520">
+          </figure>
+        </div>
+      </div>
+      <a href="#about" class="scroll-down" aria-label="Прокрутить вниз">
+        <span class="scroll-down__line" aria-hidden="true"></span>
+      </a>
     </section>
 
-    <section class="about section" id="about">
-        <div class="container">
-            <div class="about__grid">
-                <div class="about__image reveal-left"><img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=500&h=650&fit=crop&crop=face" alt="Психолог" loading="lazy"></div>
-                <div class="about__content reveal-right">
-                    <span class="section__label">Обо мне</span>
-                    <h2 class="section__title">Давайте познакомимся</h2>
-                    <p class="about__text">Я помогаю людям лучше понимать себя, справляться с тревогой, выстраивать отношения и находить внутренний баланс.</p>
-                    <p class="about__text">В работе я сочетаю когнитивно-поведенческую терапию, гештальт-подход и техники осознанности.</p>
-                    <div class="about__cards">
-                        <div class="about__card"><span class="about__card-number">5+</span><span class="about__card-text">лет практики</span></div>
-                        <div class="about__card"><span class="about__card-number">300+</span><span class="about__card-text">консультаций</span></div>
-                        <div class="about__card"><span class="about__card-number">100%</span><span class="about__card-text">индивидуальный подход</span></div>
-                    </div>
-                    <div class="about__education">
-                        <h3 class="about__education-title">Образование</h3>
-                        <ul class="about__education-list">
-                            <li>МГУ им. Ломоносова, факультет психологии</li>
-                            <li>Гештальт-институт, программа повышения квалификации</li>
-                            <li>Член Ассоциации психотерапевтов России</li>
-                        </ul>
-                    </div>
-                </div>
+    <section id="about" class="section">
+      <div class="container">
+        <div class="about__grid">
+          <figure class="about__image reveal-left">
+            <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=500&h=650&fit=crop&crop=face" alt="Кабинет психолога" loading="lazy" width="500" height="650">
+          </figure>
+          <div class="about__content reveal-right">
+            <span class="section__label">Обо мне</span>
+            <h2 class="section__title">Давайте познакомимся</h2>
+            <p class="about__text">Я помогаю людям лучше понимать себя, справляться с тревогой, выстраивать отношения и находить внутренний баланс. В работе сочетаю когнитивно-поведенческую терапию, гештальт-подход и техники осознанности.</p>
+            <div class="about__cards">
+              <div class="about__card"><span class="about__card-number">5+</span><span class="about__card-text">лет практики</span></div>
+              <div class="about__card"><span class="about__card-number">300+</span><span class="about__card-text">консультаций</span></div>
+              <div class="about__card"><span class="about__card-number">100%</span><span class="about__card-text">индивидуальный подход</span></div>
             </div>
+            <div class="about__education">
+              <h3 class="about__education-title">Образование</h3>
+              <ul class="about__education-list">
+                <li>МГУ им. Ломоносова, факультет психологии</li>
+                <li>Гештальт-институт, программа повышения квалификации</li>
+                <li>Член Ассоциации психотерапевтов России</li>
+              </ul>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
 
-    <section class="services section section--light" id="services">
-        <div class="container">
-            <div class="section__header reveal-up">
-                <span class="section__label">Услуги</span>
-                <h2 class="section__title">С чем я помогаю</h2>
-                <p class="section__subtitle">Возможно, вы узнаете себя в одном из этих запросов</p>
-            </div>
-            <div class="services__grid">
-                <div class="service-card reveal-up"><div class="service-card__icon">⚡</div><h3 class="service-card__title">Тревога</h3><p class="service-card__text">Постоянное беспокойство, панические атаки, страхи</p></div>
-                <div class="service-card reveal-up"><div class="service-card__icon">😔</div><h3 class="service-card__title">Стресс</h3><p class="service-card__text">Управление эмоциями, хроническая усталость</p></div>
-                <div class="service-card reveal-up"><div class="service-card__icon">🔥</div><h3 class="service-card__title">Выгорание</h3><p class="service-card__text">Эмоциональное истощение, потеря мотивации</p></div>
-                <div class="service-card reveal-up"><div class="service-card__icon">❤</div><h3 class="service-card__title">Самооценка</h3><p class="service-card__text">Недоверие к себе, перфекционизм, стыд</p></div>
-                <div class="service-card reveal-up"><div class="service-card__icon">👥</div><h3 class="service-card__title">Отношения</h3><p class="service-card__text">Конфликты в паре, проблемы в семье, одиночество</p></div>
-                <div class="service-card reveal-up"><div class="service-card__icon">🌀</div><h3 class="service-card__title">Эмоциональная зависимость</h3><p class="service-card__text">Токсичные отношения, трудности с расставанием</p></div>
-                <div class="service-card reveal-up"><div class="service-card__icon">🔍</div><h3 class="service-card__title">Поиск себя</h3><p class="service-card__text">Неопределенность, отсутствие целей, кризис</p></div>
-                <div class="service-card reveal-up"><div class="service-card__icon">🛡</div><h3 class="service-card__title">Личные границы</h3><p class="service-card__text">Сложности с отказом, манипуляции</p></div>
-            </div>
+    <section id="services" class="section section--light">
+      <div class="container">
+        <header class="section__header reveal-up">
+          <span class="section__label">Услуги</span>
+          <h2 class="section__title">С чем я помогаю</h2>
+          <p class="section__subtitle">Возможно, вы узнаете себя в одном из этих запросов</p>
+        </header>
+        <div class="services__grid">
+          <article class="service-card reveal-up"><div class="service-card__icon">⚡</div><h3 class="service-card__title">Тревога</h3><p class="service-card__text">Постоянное беспокойство, панические атаки, страхи</p></article>
+          <article class="service-card reveal-up"><div class="service-card__icon">😔</div><h3 class="service-card__title">Стресс</h3><p class="service-card__text">Управление эмоциями, хроническая усталость</p></article>
+          <article class="service-card reveal-up"><div class="service-card__icon">🔥</div><h3 class="service-card__title">Выгорание</h3><p class="service-card__text">Эмоциональное истощение, потеря мотивации</p></article>
+          <article class="service-card reveal-up"><div class="service-card__icon">❤</div><h3 class="service-card__title">Самооценка</h3><p class="service-card__text">Недоверие к себе, перфекционизм, стыд</p></article>
+          <article class="service-card reveal-up"><div class="service-card__icon">👥</div><h3 class="service-card__title">Отношения</h3><p class="service-card__text">Конфликты в паре, проблемы в семье, одиночество</p></article>
+          <article class="service-card reveal-up"><div class="service-card__icon">🌀</div><h3 class="service-card__title">Эмоциональная зависимость</h3><p class="service-card__text">Токсичные отношения, трудности с расставанием</p></article>
+          <article class="service-card reveal-up"><div class="service-card__icon">🔍</div><h3 class="service-card__title">Поиск себя</h3><p class="service-card__text">Неопределенность, отсутствие целей, кризис</p></article>
+          <article class="service-card reveal-up"><div class="service-card__icon">🛡</div><h3 class="service-card__title">Личные границы</h3><p class="service-card__text">Сложности с отказом, манипуляции</p></article>
         </div>
+      </div>
     </section>
 
-    <section class="process section" id="process">
-        <div class="container">
-            <div class="section__header reveal-up">
-                <span class="section__label">Процесс</span>
-                <h2 class="section__title">Как проходит консультация</h2>
-                <p class="section__subtitle">Четыре шага к вашему внутреннему спокойствию</p>
+    <section id="process" class="section">
+      <div class="container">
+        <header class="section__header reveal-up">
+          <span class="section__label">Процесс</span>
+          <h2 class="section__title">Как проходит консультация</h2>
+          <p class="section__subtitle">Четыре шага к вашему внутреннему спокойствию</p>
+        </header>
+        <div class="process__timeline">
+          <div class="process__line" aria-hidden="true"></div>
+          <div class="process__steps">
+            <div class="process-step reveal-left">
+              <span class="process-step__number">01</span>
+              <div class="process-step__content">
+                <div class="process-step__icon">👋</div>
+                <h3 class="process-step__title">Знакомство</h3>
+                <p class="process-step__text">Первая встреча — время узнать друг друга. Создаем атмосферу доверия.</p>
+              </div>
             </div>
-            <div class="process__timeline">
-                <div class="process__line"></div>
-                <div class="process__steps">
-                    <div class="process-step reveal-up"><div class="process-step__number">01</div><div class="process-step__content"><div class="process-step__icon">👋</div><h3 class="process-step__title">Знакомство</h3><p class="process-step__text">Первая встреча — время узнать друг друга. Создаем атмосферу доверия.</p></div></div>
-                    <div class="process-step reveal-up"><div class="process-step__number">02</div><div class="process-step__content"><div class="process-step__icon">🎯</div><h3 class="process-step__title">Определение запроса</h3><p class="process-step__text">Вместе формулируем, с чем вы пришли и какой результат хотите.</p></div></div>
-                    <div class="process-step reveal-up"><div class="process-step__number">03</div><div class="process-step__content"><div class="process-step__icon">🔧</div><h3 class="process-step__title">Работа с проблемой</h3><p class="process-step__text">Исследуем корни переживаний и находим пути решения.</p></div></div>
-                    <div class="process-step reveal-up"><div class="process-step__number">04</div><div class="process-step__content"><div class="process-step__icon">✅</div><h3 class="process-step__title">Поддержка и результат</h3><p class="process-step__text">Вы получаете инструменты для самостоятельной работы.</p></div></div>
-                </div>
+            <div class="process-step reveal-right">
+              <span class="process-step__number">02</span>
+              <div class="process-step__content">
+                <div class="process-step__icon">🎯</div>
+                <h3 class="process-step__title">Определение запроса</h3>
+                <p class="process-step__text">Вместе формулируем, с чем вы пришли и какой результат хотите.</p>
+              </div>
             </div>
+            <div class="process-step reveal-left">
+              <span class="process-step__number">03</span>
+              <div class="process-step__content">
+                <div class="process-step__icon">🔧</div>
+                <h3 class="process-step__title">Работа с проблемой</h3>
+                <p class="process-step__text">Исследуем корни переживаний и находим пути решения.</p>
+              </div>
+            </div>
+            <div class="process-step reveal-right">
+              <span class="process-step__number">04</span>
+              <div class="process-step__content">
+                <div class="process-step__icon">✅</div>
+                <h3 class="process-step__title">Поддержка и результат</h3>
+                <p class="process-step__text">Вы получаете инструменты для самостоятельной работы.</p>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
 
-    <section class="reviews section" id="reviews">
-        <div class="container">
-            <div class="section__header reveal-up">
-                <span class="section__label">Отзывы</span>
-                <h2 class="section__title">Что говорят клиенты</h2>
-            </div>
-            <div class="reviews__slider">
-                <div class="reviews__track" id="reviewsTrack">
-                    <div class="review-card"><div class="review-card__stars">★★★★★</div><p class="review-card__text">"Елена помогла мне справиться с тревогой, которая мучила годами."</p><div class="review-card__author"><div class="review-card__avatar">А</div><div class="review-card__info"><span class="review-card__name">Анна К.</span><span class="review-card__meta">12 консультаций</span></div></div></div>
-                    <div class="review-card"><div class="review-card__stars">★★★★★</div><p class="review-card__text">"Благодаря работе с Еленой мы с мужем научились слышать друг друга."</p><div class="review-card__author"><div class="review-card__avatar">М</div><div class="review-card__info"><span class="review-card__name">Мария и Дмитрий</span><span class="review-card__meta">Семейная терапия</span></div></div></div>
-                    <div class="review-card"><div class="review-card__stars">★★★★★</div><p class="review-card__text">"Прошла через выгорание на работе. Теперь живу осознанно."</p><div class="review-card__author"><div class="review-card__avatar">И</div><div class="review-card__info"><span class="review-card__name">Ирина П.</span><span class="review-card__meta">8 консультаций</span></div></div></div>
-                    <div class="review-card"><div class="review-card__stars">★★★★★</div><p class="review-card__text">"Долго не мог найти общий язык с родителями. Теперь всё изменилось."</p><div class="review-card__author"><div class="review-card__avatar">С</div><div class="review-card__info"><span class="review-card__name">Сергей В.</span><span class="review-card__meta">6 консультаций</span></div></div></div>
-                </div>
-                <div class="reviews__nav">
-                    <button class="reviews__btn" id="reviewsPrev">◀</button>
-                    <div class="reviews__dots" id="reviewsDots"></div>
-                    <button class="reviews__btn" id="reviewsNext">▶</button>
-                </div>
-            </div>
+    <section id="reviews" class="section section--light">
+      <div class="container">
+        <header class="section__header reveal-up">
+          <span class="section__label">Отзывы</span>
+          <h2 class="section__title">Что говорят клиенты</h2>
+        </header>
+        <div class="reviews__slider reveal-up">
+          <div id="reviewsTrack" class="reviews__track">
+            <article class="review-card"><div class="review-card__stars">★★★★★</div><p class="review-card__text">"Елена помогла мне справиться с тревогой, которая мучила годами."</p><div class="review-card__author"><div class="review-card__avatar">А</div><div class="review-card__info"><span class="review-card__name">Анна К.</span><span class="review-card__meta">12 консультаций</span></div></div></article>
+            <article class="review-card"><div class="review-card__stars">★★★★★</div><p class="review-card__text">"Благодаря работе с Еленой мы с мужем научились слышать друг друга."</p><div class="review-card__author"><div class="review-card__avatar">М</div><div class="review-card__info"><span class="review-card__name">Мария и Дмитрий</span><span class="review-card__meta">Семейная терапия</span></div></div></article>
+            <article class="review-card"><div class="review-card__stars">★★★★★</div><p class="review-card__text">"Прошла через выгорание на работе. Теперь живу осознанно."</p><div class="review-card__author"><div class="review-card__avatar">И</div><div class="review-card__info"><span class="review-card__name">Ирина П.</span><span class="review-card__meta">8 консультаций</span></div></div></article>
+            <article class="review-card"><div class="review-card__stars">★★★★★</div><p class="review-card__text">"Долго не мог найти общий язык с родителями. Теперь всё изменилось."</p><div class="review-card__author"><div class="review-card__avatar">С</div><div class="review-card__info"><span class="review-card__name">Сергей В.</span><span class="review-card__meta">6 консультаций</span></div></div></article>
+          </div>
+          <div class="reviews__nav">
+            <button id="reviewsPrev" class="reviews__btn" aria-label="Предыдущий отзыв">◀</button>
+            <div id="reviewsDots" class="reviews__dots"></div>
+            <button id="reviewsNext" class="reviews__btn" aria-label="Следующий отзыв">▶</button>
+          </div>
         </div>
+      </div>
     </section>
 
-    <section class="pricing section section--light" id="pricing">
-        <div class="container">
-            <div class="section__header reveal-up">
-                <span class="section__label">Стоимость</span>
-                <h2 class="section__title">Выберите формат</h2>
-            </div>
-            <div class="pricing__grid">
-                <div class="pricing-card reveal-up">
-                    <h3 class="pricing-card__title">Индивидуальная</h3>
-                    <p class="pricing-card__duration">60 минут</p>
-                    <div class="pricing-card__price"><span class="pricing-card__amount">5 000</span><span class="pricing-card__currency">₽</span></div>
-                    <ul class="pricing-card__features"><li>Личная встреча в кабинете</li><li>Полная конфиденциальность</li><li>Индивидуальный план работы</li></ul>
-                    <a href="#contact" class="btn btn--outline">Записаться</a>
-                </div>
-                <div class="pricing-card pricing-card--featured reveal-up">
-                    <div class="pricing-card__badge">Рекомендую</div>
-                    <h3 class="pricing-card__title">Онлайн-сессия</h3>
-                    <p class="pricing-card__duration">60 минут</p>
-                    <div class="pricing-card__price"><span class="pricing-card__amount">4 500</span><span class="pricing-card__currency">₽</span></div>
-                    <ul class="pricing-card__features"><li>Видео-консультация из любой точки</li><li>Удобное время</li><li>Экономия на дороге</li><li>Бесплатная первая консультация</li></ul>
-                    <a href="#contact" class="btn btn--primary">Записаться</a>
-                </div>
-                <div class="pricing-card reveal-up">
-                    <h3 class="pricing-card__title">Семейная</h3>
-                    <p class="pricing-card__duration">90 минут</p>
-                    <div class="pricing-card__price"><span class="pricing-card__amount">7 500</span><span class="pricing-card__currency">₽</span></div>
-                    <ul class="pricing-card__features"><li>Работа с парой или семьей</li><li>Выявление паттернов</li><li>Поддержка обоих партнеров</li></ul>
-                    <a href="#contact" class="btn btn--outline">Записаться</a>
-                </div>
-            </div>
+    <section id="pricing" class="section">
+      <div class="container">
+        <header class="section__header reveal-up">
+          <span class="section__label">Стоимость</span>
+          <h2 class="section__title">Выберите формат</h2>
+        </header>
+        <div class="pricing__grid">
+          <article class="pricing-card reveal-up">
+            <h3 class="pricing-card__title">Индивидуальная</h3><p class="pricing-card__duration">60 минут</p>
+            <div class="pricing-card__price"><span class="pricing-card__amount">5 000</span><span class="pricing-card__currency">₽</span></div>
+            <ul class="pricing-card__features"><li>Личная встреча в кабинете</li><li>Полная конфиденциальность</li><li>Индивидуальный план работы</li></ul>
+            <a href="#contact" class="btn btn--outline btn--full">Записаться</a>
+          </article>
+          <article class="pricing-card pricing-card--featured reveal-up">
+            <div class="pricing-card__badge">Рекомендую</div>
+            <h3 class="pricing-card__title">Онлайн-сессия</h3><p class="pricing-card__duration">60 минут</p>
+            <div class="pricing-card__price"><span class="pricing-card__amount">4 500</span><span class="pricing-card__currency">₽</span></div>
+            <ul class="pricing-card__features"><li>Видео-консультация из любой точки</li><li>Удобное время</li><li>Экономия на дороге</li><li>Бесплатная первая консультация</li></ul>
+            <a href="#contact" class="btn btn--primary btn--full">Записаться</a>
+          </article>
+          <article class="pricing-card reveal-up">
+            <h3 class="pricing-card__title">Семейная</h3><p class="pricing-card__duration">90 минут</p>
+            <div class="pricing-card__price"><span class="pricing-card__amount">7 500</span><span class="pricing-card__currency">₽</span></div>
+            <ul class="pricing-card__features"><li>Работа с парой или семьей</li><li>Выявление паттернов</li><li>Поддержка обоих партнеров</li></ul>
+            <a href="#contact" class="btn btn--outline btn--full">Записаться</a>
+          </article>
         </div>
+      </div>
     </section>
 
-    <section class="faq section" id="faq">
-        <div class="container">
-            <div class="section__header reveal-up">
-                <span class="section__label">Вопросы</span>
-                <h2 class="section__title">Часто спрашивают</h2>
-            </div>
-            <div class="faq__list reveal-up">
-                <div class="faq-item"><button class="faq-item__question" aria-expanded="false"><span>Как проходит первая встреча?</span><span class="faq-item__icon">▼</span></button><div class="faq-item__answer"><p>Первая встреча — это знакомство и диагностика. Мы обсуждаем ваш запрос, цели, ожидания.</p></div></div>
-                <div class="faq-item"><button class="faq-item__question" aria-expanded="false"><span>Сколько длится терапия?</span><span class="faq-item__icon">▼</span></button><div class="faq-item__answer"><p>Краткосрочная терапия занимает 5-10 встреч, глубинная работа может продолжаться несколько месяцев.</p></div></div>
-                <div class="faq-item"><button class="faq-item__question" aria-expanded="false"><span>Онлайн или офлайн — что лучше?</span><span class="faq-item__icon">▼</span></button><div class="faq-item__answer"><p>И тот, и другой формат эффективны. Выбирайте то, что комфортнее вам.</p></div></div>
-                <div class="faq-item"><button class="faq-item__question" aria-expanded="false"><span>Конфиденциально ли это?</span><span class="faq-item__icon">▼</span></button><div class="faq-item__answer"><p>Абсолютно. Я работаю по кодексу этики психолога. Вся информация остается строго конфиденциальной.</p></div></div>
-            </div>
+    <section id="faq" class="section section--light">
+      <div class="container">
+        <header class="section__header reveal-up">
+          <span class="section__label">Вопросы</span>
+          <h2 class="section__title">Часто спрашивают</h2>
+        </header>
+        <div class="faq__list reveal-up">
+          <div class="faq-item"><button class="faq-item__question" aria-expanded="false">Как проходит первая встреча?<span class="faq-item__icon">▼</span></button><div class="faq-item__answer"><p>Первая встреча — это знакомство и диагностика. Мы обсуждаем ваш запрос, цели, ожидания и формат работы.</p></div></div>
+          <div class="faq-item"><button class="faq-item__question" aria-expanded="false">Сколько длится терапия?<span class="faq-item__icon">▼</span></button><div class="faq-item__answer"><p>Краткосрочная терапия занимает 5-10 встреч, глубинная работа может продолжаться несколько месяцев.</p></div></div>
+          <div class="faq-item"><button class="faq-item__question" aria-expanded="false">Онлайн или офлайн — что лучше?<span class="faq-item__icon">▼</span></button><div class="faq-item__answer"><p>И тот, и другой формат эффективны. Выбирайте то, что комфортнее вам и подходит под ваш график.</p></div></div>
+          <div class="faq-item"><button class="faq-item__question" aria-expanded="false">Конфиденциально ли это?<span class="faq-item__icon">▼</span></button><div class="faq-item__answer"><p>Абсолютно. Я работаю по кодексу этики психолога. Вся информация остается строго конфиденциальной.</p></div></div>
         </div>
+      </div>
     </section>
 
-    <section class="quiz section section--light" id="quiz">
-        <div class="container">
-            <div class="section__header reveal-up">
-                <span class="section__label">Мини-тест</span>
-                <h2 class="section__title">С чем вам помочь?</h2>
-                <p class="section__subtitle">Ответьте на 3 вопроса — и я подскажу подходящий формат</p>
+    <section id="quiz" class="section">
+      <div class="container">
+        <header class="section__header reveal-up">
+          <span class="section__label">Мини-тест</span>
+          <h2 class="section__title">С чем вам помочь?</h2>
+          <p class="section__subtitle">Ответьте на 3 вопроса — и я подскажу подходящий формат</p>
+        </header>
+        <div id="quizWrapper" class="quiz__wrapper reveal-up">
+          <div id="quizProgress" class="quiz__progress"><div class="quiz__progress-bar"></div></div>
+          <div class="quiz__slide quiz__slide--active" data-q="1">
+            <h3 class="quiz__question">Что беспокоит вас чаще всего?</h3>
+            <div class="quiz__options">
+              <button class="quiz__option" data-value="anxiety"><span class="quiz__option-emoji">😰</span><span class="quiz__option-text">Постоянная тревога, страхи, паника</span></button>
+              <button class="quiz__option" data-value="relations"><span class="quiz__option-emoji">💔</span><span class="quiz__option-text">Проблемы в отношениях, одиночество</span></button>
+              <button class="quiz__option" data-value="burnout"><span class="quiz__option-emoji">😵</span><span class="quiz__option-text">Усталость, выгорание, потеря смысла</span></button>
+              <button class="quiz__option" data-value="self"><span class="quiz__option-emoji">🤔</span><span class="quiz__option-text">Не понимаю себя, куда двигаться</span></button>
             </div>
-            <div class="quiz__wrapper reveal-up" id="quizWrapper">
-                <div class="quiz__progress"><div class="quiz__progress-bar" id="quizProgress"></div></div>
-                <div class="quiz__slides" id="quizSlides">
-                    <div class="quiz__slide quiz__slide--active" data-slide="0">
-                        <h3 class="quiz__question">Что беспокоит вас чаще всего?</h3>
-                        <div class="quiz__options">
-                            <button class="quiz__option" data-value="anxiety"><span class="quiz__option-emoji">😰</span><span class="quiz__option-text">Постоянная тревога, страхи, паника</span></button>
-                            <button class="quiz__option" data-value="relations"><span class="quiz__option-emoji">💔</span><span class="quiz__option-text">Проблемы в отношениях, одиночество</span></button>
-                            <button class="quiz__option" data-value="burnout"><span class="quiz__option-emoji">😵</span><span class="quiz__option-text">Усталость, выгорание, потеря смысла</span></button>
-                            <button class="quiz__option" data-value="self"><span class="quiz__option-emoji">🤔</span><span class="quiz__option-text">Не понимаю себя, куда двигаться</span></button>
-                        </div>
-                    </div>
-                    <div class="quiz__slide" data-slide="1">
-                        <h3 class="quiz__question">Как давно вы это переживаете?</h3>
-                        <div class="quiz__options">
-                            <button class="quiz__option" data-value="short"><span class="quiz__option-emoji">📅</span><span class="quiz__option-text">Недавно — несколько недель</span></button>
-                            <button class="quiz__option" data-value="medium"><span class="quiz__option-emoji">🗓</span><span class="quiz__option-text">Несколько месяцев</span></button>
-                            <button class="quiz__option" data-value="long"><span class="quiz__option-emoji">📆</span><span class="quiz__option-text">Больше года или всю жизнь</span></button>
-                        </div>
-                    </div>
-                    <div class="quiz__slide" data-slide="2">
-                        <h3 class="quiz__question">Какой формат вам удобнее?</h3>
-                        <div class="quiz__options">
-                            <button class="quiz__option" data-value="online"><span class="quiz__option-emoji">💻</span><span class="quiz__option-text">Онлайн — из дома</span></button>
-                            <button class="quiz__option" data-value="offline"><span class="quiz__option-emoji">🏢</span><span class="quiz__option-text">Личная встреча в кабинете</span></button>
-                            <button class="quiz__option" data-value="any"><span class="quiz__option-emoji">🤷</span><span class="quiz__option-text">Пока не знаю, подскажите</span></button>
-                        </div>
-                    </div>
-                </div>
-                <div class="quiz__result" id="quizResult">
-                    <div class="quiz__result-icon">✨</div>
-                    <h3 class="quiz__result-title" id="quizResultTitle"></h3>
-                    <p class="quiz__result-text" id="quizResultText"></p>
-                    <div class="quiz__result-actions"><a href="#contact" class="btn btn--primary">Записаться</a><a href="#services" class="btn btn--outline">Подробнее</a></div>
-                </div>
+          </div>
+          <div class="quiz__slide" data-q="2">
+            <h3 class="quiz__question">Как давно вы это переживаете?</h3>
+            <div class="quiz__options">
+              <button class="quiz__option" data-value="recent"><span class="quiz__option-emoji">📅</span><span class="quiz__option-text">Недавно — несколько недель</span></button>
+              <button class="quiz__option" data-value="months"><span class="quiz__option-emoji">🗓</span><span class="quiz__option-text">Несколько месяцев</span></button>
+              <button class="quiz__option" data-value="year"><span class="quiz__option-emoji">📆</span><span class="quiz__option-text">Больше года или всю жизнь</span></button>
             </div>
+          </div>
+          <div class="quiz__slide" data-q="3">
+            <h3 class="quiz__question">Какой формат вам удобнее?</h3>
+            <div class="quiz__options">
+              <button class="quiz__option" data-value="online"><span class="quiz__option-emoji">💻</span><span class="quiz__option-text">Онлайн — из дома</span></button>
+              <button class="quiz__option" data-value="offline"><span class="quiz__option-emoji">🏢</span><span class="quiz__option-text">Личная встреча в кабинете</span></button>
+              <button class="quiz__option" data-value="unsure"><span class="quiz__option-emoji">🤷</span><span class="quiz__option-text">Пока не знаю, подскажите</span></button>
+            </div>
+          </div>
+          <div id="quizResult" class="quiz__result">
+            <div class="quiz__result-icon">✨</div>
+            <h3 id="quizResultTitle" class="quiz__result-title"></h3>
+            <p id="quizResultText" class="quiz__result-text"></p>
+            <div class="quiz__result-actions">
+              <a href="#contact" class="btn btn--primary">Записаться</a>
+              <button id="quizRestart" class="btn btn--outline">Пройти заново</button>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
 
-    <section class="contact section" id="contact">
-        <div class="container">
-            <div class="contact__grid">
-                <div class="contact__content reveal-left">
-                    <span class="section__label">Запись</span>
-                    <h2 class="section__title">Запишитесь на консультацию</h2>
-                    <p class="contact__text">Заполните форму, и я свяжусь с вами в течение 24 часов.</p>
-                    <div class="contact__info">
-                        <div class="contact__info-item"><div class="contact__info-icon">📞</div><div class="contact__info-text"><span class="contact__info-label">Телефон</span><a href="tel:+79991234567">+7 (999) 123-45-67</a></div></div>
-                        <div class="contact__info-item"><div class="contact__info-icon">✉</div><div class="contact__info-text"><span class="contact__info-label">Email</span><a href="mailto:hello@elenapsy.ru">hello@elenapsy.ru</a></div></div>
-                        <div class="contact__info-item"><div class="contact__info-icon">📍</div><div class="contact__info-text"><span class="contact__info-label">Адрес</span><span>Москва, ул. Тверская, 15</span></div></div>
-                    </div>
+    <section id="contact" class="section section--light">
+      <div class="container">
+        <header class="section__header reveal-up">
+          <span class="section__label">Запись</span>
+          <h2 class="section__title">Запишитесь на консультацию</h2>
+          <p class="section__subtitle">Заполните форму, и я свяжусь с вами в течение 24 часов.</p>
+        </header>
+        <div class="contact__grid">
+          <div class="contact__info reveal-left">
+            <div class="contact__info-item"><div class="contact__info-icon">📞</div><div class="contact__info-text"><span class="contact__info-label">Телефон</span><a href="tel:+79991234567">+7 (999) 123-45-67</a></div></div>
+            <div class="contact__info-item"><div class="contact__info-icon">✉</div><div class="contact__info-text"><span class="contact__info-label">Email</span><a href="mailto:hello@elenapsy.ru">hello@elenapsy.ru</a></div></div>
+            <div class="contact__info-item"><div class="contact__info-icon">📍</div><div class="contact__info-text"><span class="contact__info-label">Адрес</span><span>Москва, ул. Тверская, 15</span></div></div>
+            <div class="breathing reveal-up">
+              <h3 class="section__title" style="font-size:24px;margin-bottom:8px;">Упражнение</h3>
+              <p class="section__subtitle" style="margin-bottom:24px;">Сделайте вдох вместе со мной</p>
+              <div class="breathing__circle-wrapper">
+                <div id="breathingCircle" class="breathing__circle">
+                  <div class="breathing__inner"><span id="breathingText" class="breathing__text">Начнём</span></div>
                 </div>
-                <div class="breathing reveal-up" id="breathingSection">
-                    <span class="section__label">Упражнение</span>
-                    <h3 style="font-size:32px;font-family:var(--font-heading)">Сделайте вдох вместе со мной</h3>
-                    <p class="section__subtitle">Перед записью на консультацию — минута спокойствия</p>
-                    <div class="breathing__circle-wrapper">
-                        <div class="breathing__circle" id="breathingCircle"><div class="breathing__inner"><span class="breathing__text" id="breathingText">Начнём</span></div></div>
-                        <div class="breathing__particles" id="breathingParticles"></div>
-                    </div>
-                    <button class="btn btn--outline" id="breathingStart">Начать дыхание</button>
-                </div>
-                <div class="contact__form-wrapper reveal-right">
-                    <form class="contact__form" id="contactForm" novalidate>
-                        <div class="form-group"><label class="form-label" for="name">Ваше имя</label><input type="text" id="name" name="name" class="form-input" placeholder="Как к вам обращаться?" required><span class="form-error">Пожалуйста, введите имя</span></div>
-                        <div class="form-group"><label class="form-label" for="phone">Телефон</label><input type="tel" id="phone" name="phone" class="form-input" placeholder="+7 (___) ___-__-__" required><span class="form-error">Пожалуйста, введите телефон</span></div>
-                        <div class="form-group"><label class="form-label" for="telegram">Telegram <span class="form-optional">(необязательно)</span></label><input type="text" id="telegram" name="telegram" class="form-input" placeholder="@username"></div>
-                        <div class="form-group"><label class="form-label" for="message">Сообщение</label><textarea id="message" name="message" class="form-textarea" rows="4" placeholder="Расскажите кратко..."></textarea></div>
-                        <button type="submit" class="btn btn--primary btn--full"><span class="btn__text">Записаться на консультацию</span><span class="btn__loader"></span></button>
-                        <p class="form-privacy">Нажимая кнопку, вы соглашаетесь с <a href="#">политикой конфиденциальности</a></p>
-                    </form>
-                    <div class="contact__success" id="contactSuccess">
-                        <div class="contact__success-icon">✓</div>
-                        <h3 class="contact__success-title">Заявка отправлена!</h3>
-                        <p class="contact__success-text">Я свяжусь с вами в течение 24 часов.</p>
-                    </div>
-                </div>
+                <div id="breathingParticles" class="breathing__particles"></div>
+              </div>
+              <button id="breathingStart" class="btn btn--outline btn--small">Начать дыхание</button>
             </div>
+          </div>
+          <div class="contact__form-wrapper reveal-right">
+            <form id="contactForm" class="contact__form" novalidate>
+              <div class="form-group">
+                <label for="name" class="form-label">Ваше имя</label>
+                <input type="text" id="name" class="form-input" placeholder="Как к вам обращаться?" required autocomplete="name" aria-required="true" aria-invalid="false">
+                <span class="form-error">Пожалуйста, введите имя</span>
+              </div>
+              <div class="form-group">
+                <label for="phone" class="form-label">Телефон</label>
+                <input type="tel" id="phone" class="form-input" placeholder="+7 (999) 000-00-00" required pattern="^\+7\s?\(\d{3}\)\s?\d{3}-\d{2}-\d{2}$" autocomplete="tel" aria-required="true" aria-invalid="false">
+                <span class="form-error">Введите корректный номер телефона</span>
+              </div>
+              <div class="form-group">
+                <label for="telegram" class="form-label">Telegram <span class="form-optional">(необязательно)</span></label>
+                <input type="text" id="telegram" class="form-input" placeholder="@username" autocomplete="off">
+              </div>
+              <div class="form-group">
+                <label for="message" class="form-label">Сообщение</label>
+                <textarea id="message" class="form-textarea" placeholder="Кратко опишите ваш запрос..." rows="4"></textarea>
+              </div>
+              <button type="submit" class="btn btn--primary btn--full">
+                <span class="btn__text">Записаться на консультацию</span>
+                <span class="btn__loader" aria-hidden="true"></span>
+              </button>
+              <p class="form-privacy">Нажимая кнопку, вы соглашаетесь с <a href="#">политикой конфиденциальности</a></p>
+            </form>
+            <div id="contactSuccess" class="contact__success">
+              <div class="contact__success-icon">✓</div>
+              <h3 class="contact__success-title">Заявка отправлена!</h3>
+              <p class="contact__success-text">Я свяжусь с вами в течение 24 часов.</p>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
+  </main>
 
-    <footer class="footer">
-        <div class="container">
-            <div class="footer__grid">
-                <div class="footer__brand">
-                    <a href="#" class="footer__logo">Елена Воронцова</a>
-                    <p class="footer__desc">Психолог, гештальт-терапевт. Помогаю обрести внутреннюю опору.</p>
-                </div>
-                <div class="footer__nav">
-                    <h4 class="footer__title">Навигация</h4>
-                    <ul class="footer__list">
-                        <li><a href="#about">Обо мне</a></li>
-                        <li><a href="#services">Услуги</a></li>
-                        <li><a href="#process">Как проходит</a></li>
-                        <li><a href="#reviews">Отзывы</a></li>
-                        <li><a href="#pricing">Стоимость</a></li>
-                    </ul>
-                </div>
-                <div class="footer__contacts">
-                    <h4 class="footer__title">Контакты</h4>
-                    <ul class="footer__list">
-                        <li><a href="tel:+79991234567">+7 (999) 123-45-67</a></li>
-                        <li><a href="mailto:hello@elenapsy.ru">hello@elenapsy.ru</a></li>
-                        <li>Москва, ул. Тверская, 15</li>
-                    </ul>
-                </div>
-                <div class="footer__social">
-                    <h4 class="footer__title">Соцсети</h4>
-                    <div class="footer__social-links">
-                        <a href="#" aria-label="Telegram">TG</a>
-                        <a href="#" aria-label="Instagram">IG</a>
-                        <a href="#" aria-label="WhatsApp">WA</a>
-                    </div>
-                </div>
-            </div>
-            <div class="footer__bottom"><p>© 2024 Елена Воронцова. Все права защищены.</p></div>
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <a href="#" class="footer__logo">Елена Воронцова</a>
+          <p class="footer__desc">Психолог, гештальт-терапевт. Помогаю обрести внутреннюю опору.</p>
         </div>
-    </footer>
+        <nav aria-label="Навигация">
+          <h3 class="footer__title">Навигация</h3>
+          <ul class="footer__list">
+            <li><a href="#about">Обо мне</a></li>
+            <li><a href="#services">Услуги</a></li>
+            <li><a href="#process">Как проходит</a></li>
+            <li><a href="#reviews">Отзывы</a></li>
+            <li><a href="#pricing">Стоимость</a></li>
+          </ul>
+        </nav>
+        <div>
+          <h3 class="footer__title">Контакты</h3>
+          <ul class="footer__list">
+            <li><a href="tel:+79991234567">+7 (999) 123-45-67</a></li>
+            <li><a href="mailto:hello@elenapsy.ru">hello@elenapsy.ru</a></li>
+            <li>Москва, ул. Тверская, 15</li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="footer__title">Соцсети</h3>
+          <div class="footer__social-links">
+            <a href="#" aria-label="Telegram">TG</a>
+            <a href="#" aria-label="Instagram">IG</a>
+            <a href="#" aria-label="WhatsApp">WA</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>&copy; <span id="year"></span> Елена Воронцова. Все права защищены.</p>
+      </div>
+    </div>
+  </footer>
 
-    <button class="back-to-top" id="backToTop" aria-label="Наверх">↑</button>
-    <script src="script.js"></script>
+  <button id="backToTop" class="back-to-top" aria-label="Вернуться наверх">↑</button>
+
+  <script src="script.js" defer></script>
 </body>
 </html>
