@@ -106,6 +106,48 @@ ul { list-style:none; }
 .about__education-list li { font-size:15px; color:var(--c-text-light); padding-left:24px; position:relative; }
 .about__education-list li::before { content:''; position:absolute; left:0; top:10px; width:8px; height:8px; background:var(--c-accent); border-radius:50%; }
 
+/* ====== DIPLOMAS ====== */
+.diplomas__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+.diploma-card {
+  background: var(--c-surface);
+  border: 1px solid var(--c-border);
+  border-radius: var(--r-lg);
+  overflow: hidden;
+  transition: all 0.35s ease;
+}
+.diploma-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 12px 30px var(--c-shadow-h);
+}
+.diploma-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  background: var(--c-bg2);
+  display: block;
+}
+.diploma-card__info {
+  padding: 20px;
+}
+.diploma-card__title {
+  font-family: var(--f-h);
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--c-text);
+  margin-bottom: 6px;
+  line-height: 1.3;
+}
+.diploma-card__year {
+  font-size: 13px;
+  color: var(--c-text-muted);
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
 /* ====== SERVICES ====== */
 .services__grid { display:grid; grid-template-columns:repeat(4,1fr); gap:24px; }
 .service-card { background:var(--c-surface); border:1px solid var(--c-border); border-radius:var(--r-lg); padding:32px; text-align:center; transition:all 0.35s ease; position:relative; overflow:hidden; }
@@ -274,6 +316,7 @@ ul { list-style:none; }
 
 /* ====== RESPONSIVE ====== */
 @media (max-width:1024px) {
+  .diplomas__grid { grid-template-columns: repeat(2, 1fr); }
   .services__grid { grid-template-columns:repeat(2,1fr); }
   .pricing__grid { grid-template-columns:1fr; max-width:400px; margin:0 auto; }
   .pricing-card--featured { order:-1; }
@@ -289,6 +332,7 @@ ul { list-style:none; }
   .hero__image img { height:360px; }
   .hero__mood-buttons { justify-content:center; }
   .about__grid { grid-template-columns:1fr; gap:40px; }
+  .diplomas__grid { grid-template-columns: 1fr; max-width: 400px; margin: 0 auto; }
   .services__grid { grid-template-columns:1fr; }
   .process__line { left:24px; }
   .process-step, .process-step:nth-child(even) { flex-direction:row; text-align:left; padding-left:56px; }
