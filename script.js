@@ -150,15 +150,39 @@ function initContactForm() {
     const load = btn.querySelector(".btn__loader");
     btn.disabled = true; txt.style.display = "none"; load.style.display = "block";
     
-    // Симуляция отправки
-    try {
-      await new Promise(r => setTimeout(r, 1500));
-      form.style.display = "none";
-      succ.style.display = "flex";
-    } catch (err) {
-      btn.disabled = false; txt.style.display = "block"; load.style.display = "none";
-      alert("Произошла ошибка. Попробуйте позже.");
-    }
+    // Отправка через EmailJS
+  try {
+    // Собираем данные формы
+    const templateParams = {
+      name: name.value.trim(),
+      phone: phone.value.trim(),
+      telegram: form.querySelector("#telegram")?.value.trim() || "не указан",
+      message: form.querySelector("#message")?.value.trim() || "нет сообщения",
+      // TODO: вставь свои Service ID и Template ID
+      service_id: "service_8s4syy5",
+      template_id: "template_nfxqeou"
+    };
+
+    // Отправляем
+    const response = await emailjs.send(
+      templateParams.service_id,
+      templateParams.template_id,
+      templateParams
+    );
+
+    // Успех
+    form.reset();
+    form.style.display = "none";
+    succ.style.display = "flex";
+    
+  } catch (err) {
+    // Ошибка
+    console.error("EmailJS Error:", err);
+    btn.disabled = false; 
+    txt.style.display = "block"; 
+    load.style.display = "none";
+    alert("Не удалось отправить заявку. Попробуйте позже или напишите напрямую.");
+  }
   });
 }
 
