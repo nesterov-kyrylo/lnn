@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
   initHeader(); initMobileMenu(); initSmoothScroll(); initScrollReveal();
-  initReviewsSlider(); initFAQ(); initContactForm(); initPhoneMask();
+  initReviewsSlider(); initFAQ(); initContactForm(); initPhoneMask(); initPrivacyModal();
   initBackToTop(); initThemeToggle(); initMoodSelector();
   initQuiz(); initBreathing(); initReadingProgress(); initEasterEgg();
 });
@@ -124,66 +124,82 @@ function initFAQ() {
 
 function initContactForm() {
   const form = document.getElementById("contactForm"), succ = document.getElementById("contactSuccess");
+  const consent = document.getElementById("consent"), consentGroup = document.querySelector(".form-checkbox-group");
   if (!form) return;
-  
+
   const validateField = (input) => {
     const group = input.closest(".form-group");
     let isValid = true;
     if (input.required && !input.value.trim()) isValid = false;
     if (input.pattern && !new RegExp(input.pattern).test(input.value)) isValid = false;
-    group.classList.toggle("form-group--error", !isValid);
-    input.setAttribute("aria-invalid", !isValid);
+    group?.classList.toggle("form-group--error", !isValid);
     return isValid;
   };
-  
+
+  const validateConsent = () => {
+    const ok = consent.checked;
+    consentGroup?.classList.toggle("form-checkbox-group--error", !ok);
+    return ok;
+  };
+
   ["input", "blur"].forEach(evt => form.addEventListener(evt, e => validateField(e.target)));
-  
+  consent?.addEventListener("change", validateConsent);
+
   form.addEventListener("submit", async e => {
     e.preventDefault();
     const name = form.querySelector("#name");
     const phone = form.querySelector("#phone");
-    let ok = validateField(name) && validateField(phone);
+    let ok = validateField(name) && validateField(phone) && validateConsent();
     if (!ok) return;
-    
+
     const btn = form.querySelector('button[type="submit"]');
     const txt = btn.querySelector(".btn__text");
     const load = btn.querySelector(".btn__loader");
     btn.disabled = true; txt.style.display = "none"; load.style.display = "block";
-    
-    // Отправка через EmailJS
-  try {
-    // Собираем данные формы
-    const templateParams = {
-      name: name.value.trim(),
-      phone: phone.value.trim(),
-      telegram: form.querySelector("#telegram")?.value.trim() || "не указан",
-      message: form.querySelector("#message")?.value.trim() || "нет сообщения",
-      // TODO: вставь свои Service ID и Template ID
-      service_id: "service_8s4syy5",
-      template_id: "template_nfxqeou"
-    };
 
-    // Отправляем
-    const response = await emailjs.send(
-      templateParams.service_id,
-      templateParams.template_id,
-      templateParams
-    );
-
-    // Успех
-    form.reset();
-    form.style.display = "none";
-    succ.style.display = "flex";
-    
-  } catch (err) {
-    // Ошибка
-    console.error("EmailJS Error:", err);
-    btn.disabled = false; 
-    txt.style.display = "block"; 
-    load.style.display = "none";
-    alert("Не удалось отправить заявку. Попробуйте позже или напишите напрямую.");
-  }
+    try {
+      const templateParams = {
+        name: name.value.trim(),
+        phone: phone.value.trim(),
+        telegram: form.querySelector("#telegram")?.value.trim() || "не указан",
+        message: form.querySelector("#message")?.value.trim() || "нет сообщения",
+        service_id: "service_ud3szi1",
+        template_id: "template_nfxqeou"
+      };
+      await emailjs.send(templateParams.service_id, templateParams.template_id, templateParams);
+      form.reset();
+      form.style.display = "none";
+      succ.style.display = "flex";
+    } catch (err) {
+      console.error("EmailJS Error:", err);
+      btn.disabled = false; txt.style.display = "block"; load.style.display = "none";
+      alert("Не удалось отправить заявку. Попробуйте позже или напишите напрямую.");
+    }
   });
+}
+
+function initPrivacyModal() {
+  const modal = document.getElementById("privacyModal");
+  const openBtn = document.getElementById("openPrivacy");
+  const closeBtn = modal?.querySelector(".modal__close");
+  if (!modal || !openBtn) return;
+
+  const open = (e) => {
+    e.preventDefault();
+    modal.classList.add("modal-overlay--open");
+    modal.setAttribute("aria-hidden", "false");
+    document.body.style.overflow = "hidden";
+  };
+  const close = () => {
+    modal.classList.remove("modal-overlay--open");
+    modal.setAttribute("aria-hidden", "true");
+    document.body.style.overflow = "";
+  };
+
+  openBtn.addEventListener("click", open);
+  closeBtn?.addEventListener("click", close);
+  modal.addEventListener("click", (e) => { if (e.target === modal) close(); });
+  document.addEventListener("keydown", (e) => { if (e.key === "Escape" && modal.classList.contains("modal-overlay--open")) close(); });
 }
 
 function initPhoneMask() {

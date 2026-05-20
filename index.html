@@ -328,9 +328,9 @@
         </header>
         <div class="contact__grid">
           <div class="contact__info reveal-left">
-            <div class="contact__info-item"><div class="contact__info-icon">📞</div><div class="contact__info-text"><span class="contact__info-label">Телефон</span><a href="tel:+79991234567">+7 (999) 123-45-67</a></div></div>
-            <div class="contact__info-item"><div class="contact__info-icon">✉</div><div class="contact__info-text"><span class="contact__info-label">Email</span><a href="mailto:hello@elenapsy.ru">hello@elenapsy.ru</a></div></div>
-            <div class="contact__info-item"><div class="contact__info-icon">📍</div><div class="contact__info-text"><span class="contact__info-label">Адрес</span><span>Москва, ул. Тверская, 15</span></div></div>
+            <div class="contact__info-item"><div class="contact__info-icon">📞</div><div class="contact__info-text"><span class="contact__info-label">Телефон</span><a href="tel:+79005686624">+7 (900) 568-66-24</a></div></div>
+            <div class="contact__info-item"><div class="contact__info-icon">✉</div><div class="contact__info-text"><span class="contact__info-label">Email</span><a href="mailto:nesterova.help@gmail.com">nesterova.help@gmail.com</a></div></div>
+            <div class="contact__info-item"><div class="contact__info-icon">📍</div><div class="contact__info-text"><span class="contact__info-label">Адрес</span><span>Калинигград, ул. Флотская</span></div></div>
             <div class="breathing reveal-up">
               <h3 class="section__title" style="font-size:24px;margin-bottom:8px;">Упражнение</h3>
               <p class="section__subtitle" style="margin-bottom:24px;">Сделайте вдох вместе со мной</p>
@@ -367,7 +367,14 @@
                 <span class="btn__text">Записаться на консультацию</span>
                 <span class="btn__loader" aria-hidden="true"></span>
               </button>
-              <p class="form-privacy">Нажимая кнопку, вы соглашаетесь с <a href="#">политикой конфиденциальности</a></p>
+              <div class="form-checkbox-group">
+                <label class="form-checkbox">
+                  <input type="checkbox" id="consent" required>
+                  <span class="form-checkbox__custom"></span>
+                  <span class="form-checkbox__text">Я согласен на обработку персональных данных и принимаю <a href="#" id="openPrivacy">Политику конфиденциальности</a></span>
+                </label>
+                <span class="form-error form-consent-error">Необходимо дать согласие на обработку данных</span>
+              </div>
             </form>
             <div id="contactSuccess" class="contact__success">
               <div class="contact__success-icon">✓</div>
@@ -401,9 +408,9 @@
         <div>
           <h3 class="footer__title">Контакты</h3>
           <ul class="footer__list">
-            <li><a href="tel:+79991234567">+7 (999) 123-45-67</a></li>
-            <li><a href="mailto:hello@elenapsy.ru">hello@elenapsy.ru</a></li>
-            <li>Москва, ул. Тверская, 15</li>
+            <li><a href="tel:+79005686624">+7 (900) 568-66-24</a></li>
+            <li><a href="mailto:nesterova.help@gmail.com">hnesterova.help@gmail.com</a></li>
+            <li>Калинигград, ул. Флотская</li>
           </ul>
         </div>
         <div>
@@ -432,5 +439,25 @@
         emailjs.init("Bkw9kyc8c5A_A7oSu");
     })();
   </script>
+  <div class="modal-overlay" id="privacyModal" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="modal">
+      <button class="modal__close" aria-label="Закрыть окно">✕</button>
+      <h2 class="modal__title">Политика конфиденциальности</h2>
+      <div class="modal__content">
+        <p>Настоящая Политика конфиденциальности определяет порядок обработки персональных данных пользователей сайта психолога Натальи Нестеровой в соответствии с ФЗ-152 «О персональных данных».</p>
+        <h3>1. Цель обработки</h3>
+        <p>Обработка заявок на запись на консультацию, установление обратной связи, оказание психологических услуг.</p>
+        <h3>2. Состав данных</h3>
+        <p>Имя, номер телефона, аккаунт Telegram, текст сообщения, история консультаций.</p>
+        <h3>3. Правовое основание</h3>
+        <p>Ваше согласие, предоставленное при активации чекбокса на сайте. Вы вправе отозвать согласие в любой момент.</p>
+        <h3>4. Конфиденциальность</h3>
+        <p>Данные не передаются третьим лицам, за исключением случаев, предусмотренных законодательством РФ. Оператор применяет технические и организационные меры защиты информации.</p>
+        <h3>5. Ваши права</h3>
+        <p>Вы можете запросить доступ к своим данным, их уточнение, блокировку или удаление, направив запрос на <a href="mailto:nesterova.help@gmail.com">nesterova.help@gmail.com</a>.</p>
+        <p><em>Дата обновления: 20.05.2026. Действует до отзыва согласия.</em></p>
+      </div>
+    </div>
+  </div>
 </body>
 </html>
