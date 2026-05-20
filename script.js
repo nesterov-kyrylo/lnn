@@ -303,8 +303,8 @@ function initQuiz() {
   
   document.getElementById("quizRestart")?.addEventListener("click", () => {
     cur = 0; answers.length = 0;
-    slides.forEach(s => s.style.display = "block");
-    slides.forEach((s, i) => s.classList.toggle("quiz__slide--active", i === 0));
+    slides.forEach(s => s.style.display = ""); // ✅ Сбрасываем инлайн-стили, чтобы CSS заработал снова
+    show(0); // ✅ Показываем первый слайд (включает класс --active)
     progress.style.display = "block";
     result.classList.remove("quiz__result--show");
     updProg();
